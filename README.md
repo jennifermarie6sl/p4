@@ -35,31 +35,31 @@ Data Extracted from Kaggle for ETL project:
 master.csv "Suicide Rates by year and country from 1985 to 2016"
 
 ### Step 1: ETL
-#### Extracting:​
-Extracted from Kaggle data sets.​​
+#### Extracting:
+Extracted from Kaggle data sets.
 
-#### Transform:​
-These files did not have columns with the year so that was added.​
-Concat was used to stack the two dataframes. ​
-Renamed some columns for ease of use in the database.​
-Added country code for use with visualizations​​
+#### Transform:
+These files did not have columns with the year so that was added.
+Concat was used to stack the two dataframes. 
+Renamed some columns for ease of use in the database.
+Added country code for use with visualizations.
 
-#### Loading:​
-Once the data was cleaned up pandas was used to turn the dataframe into a dictionary. Pymongo helped to load the data into a "happy_db" MongoDB DataBase with collection names of "happy" and "suicide."​
+#### Loading:
+Once the data was cleaned up pandas was used to turn the dataframe into a dictionary. Pymongo helped to load the data into a "happy_db" MongoDB DataBase with collection names of "happy" and "suicide."
 
 ### Step 2: Flask
-Used to connect database from MongoDb to feed to our JavaScript for plotting.​
-Created route that included both collections within the database.​
-Returned the results jsonified for use in JS.​
-Removed nulls​
+Used to connect database from MongoDb to feed to our JavaScript for plotting.
+Created route that included both collections within the database.
+Returned the results jsonified for use in JS.
+Removed nulls
 
 ### Step 3: JavaScript
-Used to display the dashboard of interactive visuals.​
-Drop down menu operates all visuals.​
-Filters to sort data by year.​
-Plotly for plotting multiple traces to different table, bubble, bar, and map plots.​
-Anime.js to animate the header.​
-optionChanged, aggregation and unpack functions used on the data for plotting.​
+Used to display the dashboard of interactive visuals.
+Drop down menu operates all visuals.
+Filters to sort data by year.
+Plotly for plotting multiple traces to different table, bubble, bar, and map plots.
+Anime.js to animate the header.
+optionChanged, aggregation and unpack functions used on the data for plotting.
 
 ### Step 4: HTML and CSS
 Used to display the dashboard of interactive visuals.​
@@ -86,22 +86,23 @@ The route was added to the Flask App.
 The MongoDB database was added to MongoDB Atlas to send it to the cloud in preparation for deployment.
 The site files were added to GitHub to give Heroku access so the site could be deployed. 
 
-### Tools and Languages​
-Jupyter Notebook​
+### Tools and Languages
+Jupyter Notebook
 Google Collab
-Flask​
-MongoDB​
+Flask
+MongoDB
 MongoDB Atlas
 SK Learn
 Tensor Flow
-JavaScript​
-Plotly​
-HTML​
-CSS/Bootstrap​/Bootswatch
-Anime.js to animate the ​
+JavaScript
+Plotly
+HTML
+CSS/Bootstrap/Bootswatch
+Anime.js to animate the 
 GitHub
 Heroku
 
+## Website Elements
 ### World Map of Happiness Score
 Plotting the happiness score by rank on a map of countries, you can see minor differences when you toggle between the two years available from the drop down. When you hover over each country you can see the country, happiness score as well as the country code. This data is also what fills in the table that displays the countries in order by rank. Again, there were only minor differences in the rank between the two years analyzed.
 
@@ -136,12 +137,12 @@ alt text
 
 ## Predictions Page
 ### Happiness Scores Trend Line by Country
-Visualize the trend line of happiness score by country. 
+Visualize the trend of happiness score by country over the years of 2015 through 2019, including a data point for the predicted happiness score. 
 
 Figure: 
 
 ### Happiness Scores from Machine Learning Models
-Display the happiness scores by country for the actual score and the scores predicted by various machine learning models.
+Display the happiness scores by country for the actual score as well as the scores predicted by various machine learning models.
 
 Figure: 
 
